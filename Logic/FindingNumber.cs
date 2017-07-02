@@ -50,8 +50,8 @@ namespace Logic
         /// Method checks, if for input number exists the nearest greatest integer 
         /// which consists of the digits of the input number.
         /// </summary>
-        /// <param name="number"></param>
-        /// <returns></returns>
+        /// <param name="number">Integer, which will be checked.</param>
+        /// <returns>True, if for input number exists the nearest greatest integer and false otherwise.</returns>
         private static bool CheckNumber(int number)
         {
             int[] numberArray = ToDigitArray(number);

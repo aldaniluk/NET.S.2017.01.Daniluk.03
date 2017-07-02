@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -50,10 +51,19 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ArraySeparationTests.cs" />
-    <Compile Include="FindingNumberTests.cs" />
     <Compile Include="InsertionNumberTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Numbers.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{793327f4-e390-408b-842b-8e445edf0db2}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

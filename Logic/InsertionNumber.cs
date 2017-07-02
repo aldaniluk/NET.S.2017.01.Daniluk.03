@@ -32,7 +32,7 @@ namespace Logic
         }
         #endregion
 
-        #region Helpers (private)
+        #region Insert Helpers (private)
         /// <summary>
         /// Method transform the number into array of bits.
         /// </summary>

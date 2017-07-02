@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestCases>
+  <TestCase>
+    <FirstNumber>8</FirstNumber>
+    <SecondNumber>15</SecondNumber>
+    <StartPosition>0</StartPosition>
+    <FinishPosition>0</FinishPosition>
+    <ExpectedResult>9</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <FirstNumber>0</FirstNumber>
+    <SecondNumber>15</SecondNumber>
+    <StartPosition>0</StartPosition>
+    <FinishPosition>30</FinishPosition>
+    <ExpectedResult>15</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <FirstNumber>15</FirstNumber>
+    <SecondNumber>15</SecondNumber>
+    <StartPosition>1</StartPosition>
+    <FinishPosition>4</FinishPosition>
+    <ExpectedResult>31</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <FirstNumber>0</FirstNumber>
+    <SecondNumber>15</SecondNumber>
+    <StartPosition>30</StartPosition>
+    <FinishPosition>30</FinishPosition>
+    <ExpectedResult>1073741824</ExpectedResult>
+  </TestCase>
+</TestCases>
