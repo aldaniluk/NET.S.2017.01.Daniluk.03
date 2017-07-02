@@ -7,8 +7,7 @@ namespace Logic
     {
         #region NextBiggerNumber (public)
         /// <summary>
-        /// Method search the nearest greatest integer which consists of the
-        /// digits of the input number.
+        /// Method searches the nearest greatest integer which consists of digits of the input number.
         /// </summary>
         /// <param name="number">Initial number.</param>
         /// <returns>The nearest greatest integer (returns -1, if integer doesn't exist).</returns>
@@ -47,11 +46,10 @@ namespace Logic
         }
 
         /// <summary>
-        /// Method checks, if for input number exists the nearest greatest integer 
-        /// which consists of the digits of the input number.
+        /// Method checks if for input number exists the nearest greatest integer which consists of the digits of the input number.
         /// </summary>
         /// <param name="number">Integer, which will be checked.</param>
-        /// <returns>True, if for input number exists the nearest greatest integer and false otherwise.</returns>
+        /// <returns>True, if for input number exists the nearest greatest integer, and false otherwise.</returns>
         private static bool CheckNumber(int number)
         {
             int[] numberArray = ToDigitArray(number);
@@ -64,7 +62,7 @@ namespace Logic
         /// <summary>
         /// Method divides a number into an array of digits.
         /// </summary>
-        /// <param name="number">Integer, which will be divided.</param>
+        /// <param name="number">Integer which will be divided.</param>
         /// <returns>Array of digits of the number.</returns>
         private static int[] ToDigitArray(int number)
         {
@@ -80,7 +78,7 @@ namespace Logic
         /// <summary>
         /// Method returns quantity of digits in the number.
         /// </summary>
-        /// <param name="number">Method will count quantity of digits in this number.</param>
+        /// <param name="number">Method counts quantity of digits in this number.</param>
         /// <returns>Quantity of digits.</returns>
         private static int GetDigitArrayLength(int number)
         {

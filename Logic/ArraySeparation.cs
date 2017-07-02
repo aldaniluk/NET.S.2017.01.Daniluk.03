@@ -6,8 +6,7 @@ namespace Logic
     {
         #region FindSeparatorIndex (public)
         /// <summary>
-        /// Method search an index of the element,for which the sum of the right elements 
-        /// is equal of the sum of the left elements.
+        /// Method searches index of the element, for which the sum of right elements is equal of the sum of left elements.
         /// </summary>
         /// <param name="array">Array of int numbers.</param>
         /// <returns>Index of found element (returns -1, if element doesn't exist).</returns>

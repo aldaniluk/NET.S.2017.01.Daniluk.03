@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logic
 {
@@ -14,8 +10,8 @@ namespace Logic
         /// </summary>
         /// <param name="first">The int number, at which the second will be inserted.</param>
         /// <param name="second">The int number, which will be inserted.</param>
-        /// <param name="startPosition">The int number, from which it will be inserted the second number into the first.</param>
-        /// <param name="finishPosition">The int number, to which it will be inserted the second number into the first.</param>
+        /// <param name="startPosition">The index, from which method inserts the second number into the first.</param>
+        /// <param name="finishPosition">The index, to which method inserts the second number into the first.</param>
         /// <returns></returns>
         public static int Insert(int first, int second, int startPosition, int finishPosition)
         {
@@ -52,8 +48,8 @@ namespace Logic
         /// <summary>
         /// Method checks input values of startPosition and finishPosition.
         /// </summary>
-        /// <param name="startPosition">The int number, from which it will be inserted the second number into the first.</param>
-        /// <param name="finishPosition">The int number, from which it will be inserted the second number into the first.</param>
+        /// <param name="startPosition">The index, from which method inserts the second number into the first.</param>
+        /// <param name="finishPosition">The index, to which method inserts the second number into the first.</param>
         private static void CheckPosition(int startPosition, int finishPosition)
         {
             if (startPosition < 0 || startPosition > 31)
