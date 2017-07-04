@@ -45,8 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArraySeparationTests.cs" />
-    <Compile Include="FindingNumberTests.cs" />
-    <Compile Include="InsertionNumberTests.cs" />
+    <Compile Include="NumberExtensionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

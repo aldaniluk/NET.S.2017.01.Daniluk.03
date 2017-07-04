@@ -4,7 +4,7 @@ namespace Logic
 {
     public class ArraySeparation
     {
-        #region FindSeparatorIndex (public)
+        #region FindSeparatorIndex
         /// <summary>
         /// Method searches index of the element, for which the sum of right elements is equal of the sum of left elements.
         /// </summary>
@@ -22,9 +22,7 @@ namespace Logic
             }
             return -1;
         }
-        #endregion
 
-        #region FindSeparatorIndex Helpers (private)
         /// <summary>
         /// Method finds the sum of elements in int array from startPosition to finishPosition.
         /// </summary>
@@ -50,17 +48,17 @@ namespace Logic
         {
             if (array == null)
             {
-                throw new ArgumentNullException("Array is null.");
+                throw new ArgumentNullException($"{nameof(array)} is null.");
             }
             if (array.Length == 0)
             {
-                throw new ArgumentException("Array is empty.");
+                throw new ArgumentException($"{nameof(array)} is empty.");
             }
             if (array.Length >= 1000)
             {
-                throw new ArgumentException("Array is unsuitable.");
+                throw new ArgumentException($"{nameof(array)} is unsuitable.");
             }
         }
+        #endregion
     }
-    #endregion
 }
