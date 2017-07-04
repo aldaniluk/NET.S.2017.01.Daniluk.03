@@ -2,7 +2,7 @@
 
 namespace Logic
 {
-    public class ArraySeparation
+    public static class ArraySeparation
     {
         #region FindSeparatorIndex
         /// <summary>
