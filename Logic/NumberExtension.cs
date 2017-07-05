@@ -9,6 +9,9 @@ namespace Logic
 {
     public static class NumberExtension
     {
+        private static int maxInt = 0x7fffffff;
+        private static int quantityOfBits = 31;
+
         #region Insertion
         /// <summary>
         /// Method inserts one int number into another.
@@ -22,17 +25,33 @@ namespace Logic
         {
             CheckPosition(startPosition, finishPosition);
 
-            BitArray arrFirst = new BitArray(new int[] { first });
-            BitArray arrSecond = new BitArray(new int[] { second });
-            
-            for (int i = startPosition; i <= finishPosition; i++)
-            {
-                arrFirst[i] = arrSecond[i - startPosition];
-            }
+            #region with BitArray
+            //BitArray arrFirst = new BitArray(new int[] { first });
+            //BitArray arrSecond = new BitArray(new int[] { second });
 
-            byte[] array = new byte[32];
-            arrFirst.CopyTo(array, 0);
-            return BitConverter.ToInt32(array, 0);
+            //for (int i = startPosition; i <= finishPosition; i++)
+            //{
+            //    arrFirst[i] = arrSecond[i - startPosition];
+            //}
+
+            //byte[] array = new byte[32];
+            //arrFirst.CopyTo(array, 0);
+            //return BitConverter.ToInt32(array, 0);
+            #endregion
+
+            #region with bitwise operations
+            int maskSecondNumber = maxInt >> quantityOfBits - (finishPosition - startPosition + 1);
+            maskSecondNumber &= second;
+            maskSecondNumber <<= startPosition;
+
+            int maskLeft = maxInt << (finishPosition + 1);
+            maskLeft &= first;
+
+            int maskRight = maxInt >> quantityOfBits - startPosition;
+            maskRight &= first;
+
+            return maskLeft ^ maskSecondNumber ^ maskRight;
+            #endregion
         }
 
         /// <summary>
