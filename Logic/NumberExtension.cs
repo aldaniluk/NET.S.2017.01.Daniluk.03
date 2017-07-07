@@ -104,6 +104,35 @@ namespace Logic
             }
         }
 
+        #region NextBiggerNumberWithTime
+        /// <summary>
+        /// Method searches the nearest greatest integer which consists of digits of the input number.
+        /// </summary>
+        /// <param name="number">Initial number.</param>
+        /// <returns>The tuple of greatest integer and date and time of finding.</returns>
+        public static Tuple<int, DateTime> NextBiggerNumberWithTimeUsingTuple(int number)
+        {
+            return Tuple.Create(NextBiggerNumber(number), DateTime.Now);
+        }
+
+        //public static (int num, DateTime date) NextBiggerNumberWithTimeUsingTuple1(int number)
+        //{
+        //    return (NextBiggerNumber(number), DateTime.Now);
+        //}
+
+        /// <summary>
+        /// Method searches the nearest greatest integer which consists of digits of the input number.
+        /// </summary>
+        /// <param name="number">Initial number.</param>
+        /// <param name="date">Date and time of finding.</param>
+        /// <returns>The nearest greatest integer (returns -1, if integer doesn't exist).</returns>
+        public static int NextBiggerNumberWithTimeUsingOut(int number, out DateTime date)
+        {
+            date = DateTime.Now;
+            return NextBiggerNumber(number);
+        }
+        #endregion
+
         /// <summary>
         /// Method checks if for input number exists the nearest greatest integer which consists of the digits of the input number.
         /// </summary>
