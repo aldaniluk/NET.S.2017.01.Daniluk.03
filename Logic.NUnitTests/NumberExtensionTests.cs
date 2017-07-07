@@ -55,5 +55,32 @@ namespace Logic.NUnitTests
             return NumberExtension.NextBiggerNumber(number);
         }
         #endregion
+
+        #region NewtonMethod Tests
+        [TestCase(10, 3, 0.01, 2.15443532640779)]
+        [TestCase(9, 0.5, 0.01, 81)]
+        [TestCase(3, 12, 0.01, 1.09588034828661)]
+        [TestCase(25, 2, 0.1, 5.00001295304868)]
+        [TestCase(1.34, 3, 0.001, 1.10247461422151)]
+        [TestCase(2.5, 0.5, 0.001, 6.249999998476)]
+        [TestCase(-4, 3, 0.001, -1.58740105196984)]
+        [TestCase(-1.5, 5, 0.001, -1.08447204695422)]
+        public void NewtonMethod_CorrectInputValues_PositiveTest(double number, double n, double accuracy, double ExpectedResult)
+        {
+            double actual = NumberExtension.NewtonMethod(number, n, accuracy);
+            double expected = ExpectedResult;
+            Assert.AreEqual(actual, expected, 0.0000001);
+        }
+
+        [TestCase(10, 3, 2.15443469003188)]
+        [TestCase(3, 12, 1.09587269113524)]
+        [TestCase(9, 0.5, 81)]
+        public void NewtonMethod_DefaultAccuracy_PositiveTest(double number, double n, double ExpectedResult)
+        {
+            double actual = NumberExtension.NewtonMethod(number, n);
+            double expected = ExpectedResult;
+            Assert.AreEqual(actual, expected, 0.0000001);
+        }
+        #endregion
     }
 }

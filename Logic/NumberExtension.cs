@@ -121,5 +121,28 @@ namespace Logic
             return numberString != string.Concat(newNumberCharArray);
         }
         #endregion
+
+        #region NewtonMethod
+        /// <summary>
+        /// Method for finding the root of n degree of a number with a given accuracy.
+        /// </summary>
+        /// <param name="number">Number for taking a root.</param>
+        /// <param name="n">Degree.</param>
+        /// <param name="accuracy">Calculation accuracy.</param>
+        /// <returns></returns>
+        public static double NewtonMethod(double number, double n, double accuracy = 0.0000001)
+        {
+            double x0 = number / n;
+            double x1 = (1 / n) * ((n - 1) * x0 + (number / Math.Pow(x0, n - 1)));
+
+            while(Math.Abs(x1 - x0) > accuracy)
+            {
+                x0 = x1;
+                x1 = (1 / n) * ((n - 1) * x0 + (number / Math.Pow(x0, n - 1)));
+            }
+
+            return x1;
+        }
+        #endregion
     }
 }
